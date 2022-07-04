@@ -2,13 +2,13 @@ package day3PracticeProblems;
 
 import java.util.Scanner;
 
-public class Smallest_Elements {
+public class Elements_in_reverse_order {
 
 	public static void main(String[] args) {
 		/**
-		 * taking size of array
+		 * taking size of array 
 		 * taking elements for array
-		 * calculating largest among all elements
+		 * printing reverse of array elements in reverse order
 		 */
 
 		System.out.println("Enter size of array");
@@ -20,13 +20,12 @@ public class Smallest_Elements {
 			int a = scanner.nextInt();
 			arr[i] = a;
 		}
-		int t = arr[0];
-		for (int i = 0; i < arr.length; i++) {
-			if (t > arr[i]) {
-				t = arr[i];
-			}
+		System.out.println("Reverse order ");
+
+		for (int i = arr.length - 1; i >= 0; --i) {
+
+			System.out.println(+arr[i]);
 		}
-		System.out.println("Smallest element is " + t);
 		scanner.close();
 	}
 }
