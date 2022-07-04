@@ -3,13 +3,14 @@ package day3PracticeProblems;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Array_accending_order {
+public class Duplicate_Array_Elements {
 
 	public static void main(String[] args) {
 		/**
 		 * taking size of array 
-		 * taking elements for array
-		 * sorting of array in accending order
+		 * taking elements for array 
+		 * finding the duplicate value in array elements
+		 * 
 		 */
 
 		System.out.println("Enter size of array");
@@ -21,9 +22,13 @@ public class Array_accending_order {
 			int a = scanner.nextInt();
 			arr[i] = a;
 		}
-		Arrays.sort(arr);
 		for (int i = 0; i < arr.length; i++) {
-			System.out.println(+arr[i]);
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] == (arr[j])) {
+					System.out.println(+arr[i]);
+					break;
+				}
+			}
 		}
 		scanner.close();
 	}
