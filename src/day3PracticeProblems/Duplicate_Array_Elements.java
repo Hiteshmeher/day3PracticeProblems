@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Duplicate_Array_Elements {
 
+
 	public static void main(String[] args) {
 		/**
 		 * taking size of array 
@@ -12,7 +13,6 @@ public class Duplicate_Array_Elements {
 		 * finding the duplicate value in array elements
 		 * 
 		 */
-
 		System.out.println("Enter size of array");
 		Scanner scanner = new Scanner(System.in);
 		int arrsize = scanner.nextInt();
@@ -22,14 +22,8 @@ public class Duplicate_Array_Elements {
 			int a = scanner.nextInt();
 			arr[i] = a;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] == (arr[j])) {
-					System.out.println(+arr[i]);
-					break;
-				}
-			}
-		}
+		Arrays.sort(arr);	
+		System.out.println("Second Largest element is "+arr[arr.length-2]);
 		scanner.close();
 	}
 }
