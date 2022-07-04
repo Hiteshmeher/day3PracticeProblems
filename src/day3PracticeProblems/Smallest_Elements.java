@@ -2,7 +2,7 @@ package day3PracticeProblems;
 
 import java.util.Scanner;
 
-public class Largest_Elements {
+public class Smallest_Elements {
 
 	public static void main(String[] args) {
 		/**
@@ -22,11 +22,11 @@ public class Largest_Elements {
 		}
 		int t = arr[0];
 		for (int i = 0; i < arr.length; i++) {
-			if (t < arr[i]) {
+			if (t > arr[i]) {
 				t = arr[i];
 			}
 		}
-		System.out.println("Largest element is " + t);
+		System.out.println("Smallest element is " + t);
 		scanner.close();
 	}
 }
